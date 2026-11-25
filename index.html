@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eeeade">
+  <title>A Little Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <span class="brand">✳ A LITTLE SPACE</span>
+      <span class="top-note">a quiet little corner</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">— TAKE A MOMENT —</div>
+
+      <div class="sun-art">
+        <span class="sun-ring"></span>
+        <span class="sun-core"></span>
+        <span class="spark">✦</span>
+      </div>
+
+      <h1>A little space<br><em>to just be.</em></h1>
+
+      <p class="intro">
+        Nothing to figure out. Nothing to rush.<br>
+        Just a small moment, whenever you're ready.
+      </p>
+    </section>
+
+    <section class="player-card">
+      <div class="card-top">
+        <div class="audio-icon">♫</div>
+        <div>
+          <div class="track-label">A VOICE NOTE</div>
+          <div class="track-subtitle">Whenever you're ready.</div>
+        </div>
+      </div>
+
+      <audio id="voice" preload="metadata">
+        <source src="assets/voice-note.mp3" type="audio/mpeg">
+      </audio>
+
+      <input id="seek" type="range" min="0" max="100" value="0">
+
+      <div class="time-row">
+        <span id="current">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <span id="message">Take your time.</span>
+        <button id="play" aria-label="Play voice note">▶</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>❧</span>
+      <p>made of little moments</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
