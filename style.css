@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+  --paper: #eeeade;
+  --light: #f8f6ef;
+  --ink: #465343;
+  --muted: #858977;
+  --sage: #84927a;
+  --dark-sage: #68785f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 25%, #ffffffaa, transparent 55%),
+    #eeeade;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.page {
+  width: min(100% - 36px, 480px);
+  min-height: 100vh;
+  margin: auto;
+  padding: 28px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.top-note {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.hero {
+  text-align: center;
+  padding: 48px 0 32px;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--dark-sage);
+}
+
+.sun-art {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 28px auto 20px;
+  display: grid;
+  place-items: center;
+}
+
+.sun-ring {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  border: 1px solid #a9b49b88;
+  border-radius: 50%;
+}
+
+.sun-core {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #c9d0b9, #84927a);
+  box-shadow: 0 0 35px #a9b49b66;
+}
+
+.spark {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 20px;
+  color: #89977c;
+  animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(39px, 10vw, 53px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+h1 em {
+  color: #87947b;
+}
+
+.intro {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.player-card {
+  padding: 23px 20px;
+  border-radius: 23px;
+  background: #faf9f3;
+  border: 1px solid #ffffff;
+  box-shadow: 0 20px 60px #59634d12;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.audio-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #e5e9df;
+  color: var(--dark-sage);
+  font-size: 25px;
+}
+
+.track-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--dark-sage);
+  font-weight: 600;
+}
+
+.track-subtitle {
+  margin-top: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
+
+#seek {
+  width: 100%;
+  margin-top: 30px;
+  accent-color: var(--dark-sage);
+  cursor: pointer;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  color: #999b8d;
+  font-size: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+#message {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+#play {
+  width: 49px;
+  height: 49px;
+  border: none;
+  border-radius: 50%;
+  background: var(--dark-sage);
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #68785f44;
+  transition: transform .2s, background .2s;
+}
+
+#play:active {
+  transform: scale(.93);
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 38px;
+  text-align: center;
+  color: #929886;
+}
+
+footer span {
+  font-size: 24px;
+}
+
+footer p {
+  margin-top: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-top: 32px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .player-card {
+    padding: 19px 16px;
+  }
+}
